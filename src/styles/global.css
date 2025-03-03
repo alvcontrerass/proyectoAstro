@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "Figtree";
+    src: url(../../public/Figtree-VariableFont_wght.ttf) format("ttf");
+}
+
+body {
+    font-family: "Figtree", sans-serif;
+}
