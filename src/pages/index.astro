@@ -1,10 +1,44 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import NewsCard from '../components/NewsCard.astro';
+import AlertCard from '../components/AlertCard.astro';
+import CalendarioCard from '../components/CalendarCard.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout title="Inicio">
-	
+    <section id="carrousel">
+        <div class="w-full flex flex-wrap h-screen-3/4">
+            <img class="object-cover w-full h-full" src="https://www.rededuca.net/sites/default/files/2023-09/Dise%C3%B1o%20sin%20t%C3%ADtulo%20%285%29.jpg" alt="">
+        </div>
+    </section>
+    <section id="news" class="bg-emerald-700 py-10 px-10">
+        <h1 class="text-3xl text-center text-white pb-5">Noticias</h1>
+        <div class="flex flex-col"> <!--Ajustar posicion de las cards -->
+            <div class=" flex flex-col lg:flex-row">
+                <NewsCard />
+                <NewsCard />
+                <NewsCard />
+                <NewsCard />
+            </div>
+            <div class="flex flex-col lg:flex-row">
+                <AlertCard />
+                <AlertCard />
+                <AlertCard />
+                <AlertCard />
+            </div>
+        </div>
+    </section>
+    <section id="calendario" class="bg-white py-10 px-10">
+        <h1 class="text-3xl text-center text-emerald-800 pb-5">Calendario</h1>
+        <div class="flex flex-col lg:flex-row">
+            <CalendarioCard />
+            <CalendarioCard />
+            <CalendarioCard />
+            <CalendarioCard />
+        </div>
+
+    </section>
 </Layout>
